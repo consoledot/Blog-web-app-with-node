@@ -8,7 +8,8 @@ const app = express()
 mongoose.connect("mongodb://localhost:27017/blog",{
     useNewUrlParser:true,
     useUnifiedTopology:true,
-    useCreateIndex:true
+    useCreateIndex:true,
+    useFindAndModify:true
 })
 app.set("view engine", "ejs")
 app.use(express.urlencoded({extended:false}))
